@@ -140,6 +140,11 @@ ifdef LOCAL_SDK_VERSION
   endif
 endif
 
+ifdef SM_VENDOR
+  # Include sabermod build system configs
+  include $(SM_VENDOR)/build/sm.mk
+endif
+
 # MinGW spits out warnings about -fPIC even for -fpie?!) being ignored because
 # all code is position independent, and then those warnings get promoted to
 # errors.
